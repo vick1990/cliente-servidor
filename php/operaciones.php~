@@ -1,9 +1,10 @@
 <?php
 	/**
-	* 
+	* Esto es una clase llamada operaciones este se invocara en el front-end
 	*/
 	function __autoload($className)
 	{
+		
 		require_once('./'.$className.".php");
 	}
 	class operaciones
