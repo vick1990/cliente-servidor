@@ -1,0 +1,145 @@
+color-texto = rgba(invert(white),.3)
+@font-face {
+	font-family: 'redes';
+	src:url('../fonts/redes.eot?r8z3ms');
+	src:url('../fonts/redes.eot?#iefixr8z3ms') format('embedded-opentype'),
+		url('../fonts/redes.woff?r8z3ms') format('woff'),
+		url('../fonts/redes.ttf?r8z3ms') format('truetype'),
+		url('../fonts/redes.svg?r8z3ms#redes') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html
+	height 100%
+body
+	font-size 14px
+	height 100%
+	font-family Arial
+.contenido
+	background rgba(#68B078,0.5)
+	position relative
+	height 462px
+	padding-top 3em
+	.contacto
+		position relative
+		text-align center
+		h4
+			margin 0
+			font-size 1.3em
+			color color-texto
+			text-align center
+		.redes
+			ul
+				margin 0
+				li
+					display block
+					margin-left -10px
+					a
+						text-decoration none
+						font-size 1.3em
+					.face
+					.twitter
+					.github
+					.google
+						font-family 'redes'
+						font-size 2em
+						color gray
+
+					.github
+						&:before
+							content "\e603"
+						&:hover
+							color black
+					.google
+						&:before
+							content "\e602"
+						&:hover
+							color #9F0000
+					.face
+						&:before
+							content "\e601"
+						&:hover
+							color #00509F;
+					.twitter
+						&:before
+							content "\e600"
+						&:hover
+							color #2894FF
+	.nombre
+		text-align center
+		// border-bottom 1px solid gray 
+		position: relative
+		.titulo
+			color color-texto
+			font-size 3em
+			position: relative
+			margin-top 1em
+			margin 0
+			font-weight normal
+		.descripcion
+			color rgba(invert(white),.6)
+			font-size 1.5em
+			font-style italic
+			position:relative
+		figure
+			background url("../img/yo.jpg") no-repeat 20px rgba(165, 165, 165, 0.67)
+			background-size 120px
+			border-radius 50%
+			box-shadow 0 0 10px black
+			position: relative
+			left 30%
+			padding 0.5em
+			height 120px
+			width 120px
+
+
+header
+	background #309A5E;
+	height 85px
+	position relative
+	.menu
+		position: absolute
+		margin-top 2em
+		right 1em
+		ul
+			margin 0
+			li
+				display inline-block
+				a
+					color white
+					text-transform normal
+					text-decoration none
+					padding 0.5em
+					font-size 1.5em
+footer
+	position:relative
+	background #309A5E;
+	h3
+		text-align center
+		color rgba(white,0.9)
+		padding 1em
+		margin 0
+
+		.autor
+			display block
+
+@media screen and (min-width:479px)
+
+	.contenido
+		.contacto
+			.redes
+				ul 
+					margin-top 20px
+					li
+						margin-right 2em
+						display inline-block
+
+@media screen and (min-width:768px)
+	.contenido
+		.nombre
+			figure
+				background-size 200px
+				left 42%
+				height 190px
+				width 190px

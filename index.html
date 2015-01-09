@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<link rel="stylesheet" href="./App/css/diseno.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+	<title>Vick Vasquez</title>
+</head>
+<body>
+	<header>
+		<div class="responsive">
+			<!--Aqui va el boton para el menu responsive
+			-->
+		</div>
+		<h1 class="titulo">
+			<div class="nombre">
+				<a href="#">Vick Vasquez</a>
+			</div>
+			<div class="twitter">			
+				<a href="http://twitter.com/vicxaam90" target="blank">@vicxaam90</a>
+			</div>
+		</h1>
+
+	</header>
+	<nav class="menu">
+		<ul>
+			<li><span class="me"></span><a href="#me">Yo</a></li>
+			<li><span class="per"></span><a href="#perfil">Perfil</a></li>
+			<li><span class="est"></span><a href="#estudio">Educacion</a></li>
+			<li><span class="blog"></span><a href="#">Blog</a></li>
+			<li><span class="cont"></span><a href="#contacto">Contacto</a></li>
+		</ul>
+	</nav>
+	<section class="content" id='me'>		
+		<article class="verde contents primero ">
+			<div class="datos-personales">
+				<figure class="avatar">
+					<img src="./App/img/yo.jpg" alt="">
+				</figure>
+				<h2 class="nombre">Vick Vasquez</h2>
+				<div class="imagenes">
+					<ul>
+						<li><span class="img1"></span></li>
+						<li><span class="img2"></span></li>
+						<li><span class="img3"></span></li>
+					</ul>
+				</div>
+			</div>
+			<p class="descripcion">
+				Hola, mi nombre es Victor Vasquez Jimenez soy desarrollador Front-End recientemente tome un curso
+				con los amigos de mejorando.la para reforzar mis conocimientos. Al mismo tiempo me encuentro trabajando en una empresa de electronica como desarrollador de sistemas, administracion del mismo 
+				un poco de redes y mantenimiento. En mis tiempos libres programo en NodeJS y  MongoDB para el lado del Backend y he echo unas cuantas apps en este lenguaje.
+				Intento sacarle el maximo partido a SublimeText es el editor el que mas me gusta por la forma que en facilita escribir codigo.
+			</p>
+			<p class="descripcion">
+				Actualmente sigo creciendo a nivel profesional tomando cursos, seminarios participando en conferencias. Por el momento me encuentro tomando un curso de MongoDB el cual es impartido 
+				por la empresa mongoUniversity.
+			</p>
+		</article>
+		<article class="contents naranja" id='perfil'>
+			<p class="negro">
+				Front-End web developer, siempre en busca de nuevos conocimientos y nuevos retos.
+			</p>
+			<div class="skill">
+				<figure class="skills">
+					<figcaption class='styl'>Stylus</figcaption>
+					<img src="./App/img/stylus.png" alt="">
+				</figure> 
+				<figure class="skills">
+					<figcaption class='html'>HTML5</figcaption>
+					<img src="./App/img/html.png" alt="">
+				</figure>
+				<figure class="skills">
+					<figcaption class='css'>CSS3</figcaption>
+					<img src="./App/img/css.jpg" alt="">
+				</figure>
+				<figure class="skills">
+					<figcaption class='js'>Javascript</figcaption>
+					<img src="./App/img/javascript.png" alt="">
+				</figure>
+				<figure class="skills">
+					<figcaption class='node'>NodeJS</figcaption>
+					<img src="./App/img/nodejs.png" alt="">
+				</figure>
+				<figure class="skills">
+					<figcaption class='back'>Backbonejs</figcaption>
+					<img src="./App/img/backbone.jpg" alt="">
+				</figure>
+				<figure class="skills">
+					<figcaption class='jq'>jQuery</figcaption>
+					<img src="./App/img/jq.jpg" alt="">
+				</figure>
+				<figure class="skills">
+					<figcaption class='grunt'>GruntJS</figcaption>
+					<img src="./App/img/gruntjs.jpg" alt="">
+				</figure>
+			</div>
+		</article>
+		<article class="contents verdecito" id='estudio'>
+			<div class="utp">
+				<figure class="estudio">
+				<img src="./App/img/utp.jpg" alt="">
+				<figcaption>Universidad Tecnologica de Puebla</figcaption>
+			</figure>
+			</div>
+			<div class="mejor">
+				<figure class="estudio">
+					<img src="./App/img/mejorandola.jpg" alt="">
+					<figcaption>Curso Front-End Profesional</figcaption>
+				</figure>
+			</div>
+		</article>
+		<article class="contacto naranjita" id='contacto'>
+			<h2 class="sutitulo">
+				Contactame
+			</h2>
+			<ul class="contactos">
+				<li><a href=""><span class="twitter"></span></a></li>
+				<li><a href=""><span class="face"></span></a></li>
+				<li><a href=""><span class="git"></span></a></li>
+				<li><a href=""><span class="google"></span></a></li>		
+			</ul>
+			<h3>Diseño y desarrollo por <a href="" class="autor">Vicxaam90</a></h3>
+		</article>
+	</section>
+	<script>
+	
+		function mostrar() {
+			console.log('click')
+			document.querySelector('.menu').classList.toggle('mostrar');
+		}
+		function init () {
+			var menu = document.querySelector('.responsive');
+			var link = document.querySelector('.menu');
+			menu.addEventListener('click',mostrar);
+			link.addEventListener('click',mostrar)
+		}
+
+		init();
+
+	</script>
+</body>
+</html>

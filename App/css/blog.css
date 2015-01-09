@@ -1,0 +1,245 @@
+body {
+  font-size: 16px;
+  background: #272822;
+  font-family: Arial;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.contenedor {
+  padding: 0 10px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+.contenedor .post {
+  background: #fff;
+  padding: 0 10px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.contenedor .post .contenido-post {
+  top: 10px;
+  border-bottom: 5px solid #ff4500;
+}
+.contenedor .post .contenido-post .texto {
+  font-family: 'Open Sans';
+  text-align: justify;
+}
+.contenedor .post .tags,
+.contenedor .post .comentarios-post {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.contenedor .post .comentarios-post {
+  padding: 5px;
+  background: #272822;
+  border-radius: 5px;
+  float: right;
+  margin-top: 5px;
+}
+.contenedor .post .comentarios-post a {
+  display: block;
+  color: #fff;
+}
+.contenedor .post .tags {
+  margin: 10px;
+}
+.contenedor .post .tags .tag {
+  background: #0080ff;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.contenedor .post .titulo-post {
+  background: #0080ff;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: normal;
+  left: -20px;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 5px 5px 5px 30px;
+  position: relative;
+  top: 10px;
+  width: auto;
+  z-index: 34;
+}
+.contenedor .post .titulo-post:after {
+  content: "";
+}
+.contenedor .post .titulo-post:before {
+  content: "";
+  border-left: 19px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 11px solid #004080;
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+}
+.contenedor .etiquetas {
+  width: 100%;
+}
+.contenedor .etiquetas .titulo-etiquetas {
+  font-family: 'Open Sans';
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  font-weight: normal;
+}
+.contenedor .etiquetas ul {
+  margin: 0;
+  padding: 0;
+}
+.contenedor .etiquetas ul li {
+  background: #008040;
+  -webkit-box-shadow: inset 10px 0 5px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 10px 0 5px rgba(0,0,0,0.75);
+  box-shadow: inset 10px 0 5px rgba(0,0,0,0.75);
+  display: block;
+  padding: 1.5em;
+  padding-left: 5.5em;
+  text-align: left;
+}
+.contenedor .etiquetas ul li:nth-child(odd) {
+  background: #30b430;
+}
+.contenedor .etiquetas ul li:nth-child(even) {
+  background: #ff8000;
+}
+.contenedor .etiquetas ul li:hover {
+  opacity: 0.5;
+}
+.contenedor .etiquetas ul li a {
+  color: #fff;
+  padding: 10px 20px 10px;
+  text-transform: uppercase;
+}
+header {
+  position: relative;
+}
+header .subheader {
+  padding-top: 1em;
+  margin: 0 auto;
+  position: relative;
+  width: 95%;
+}
+header .subheader .search-box {
+  display: none;
+  width: 100%;
+  position: relative;
+  bottom: 0.5em;
+}
+header .subheader .search-box input[type=text] {
+  padding: 0.5em;
+  border-radius: 5px;
+  border-radius: 5px 0 0 5px;
+  width: 30%;
+}
+header .subheader .search-box input[type=button] {
+  padding: 0.5em;
+  position: absolute;
+}
+header .subheader .user-active {
+  display: none;
+}
+.menu {
+  width: 95%;
+  background: #8b8b8b;
+  margin: 0 auto;
+}
+.menu .responsive {
+  padding: 1em;
+  display: block;
+  cursor: pointer;
+}
+.menu ul {
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+.menu ul li {
+  display: inline-block;
+}
+.menu ul li a {
+  color: #fff;
+}
+@media screen and (min-width:767px) {
+  .contenedor {
+    border: 10px solid #808080;
+    padding: 0;
+    -webkit-box-shadow: 5px 5px 0 #ccc;
+    -moz-box-shadow: 5px 5px 0 #ccc;
+    box-shadow: 5px 5px 0 #ccc;
+  }
+  header .subheader {
+    width: 100%;
+  }
+  header .subheader .search-box,
+  header .subheader .user-active {
+    display: block;
+  }
+  .menu {
+    height: 70px;
+    width: 100%;
+    line-height: 70px;
+li
+    display: inline-block;
+a
+    padding: 1em;
+  }
+  .menu .responsive {
+    display: none;
+  }
+  .menu ul {
+    display: block;
+  }
+  .menu vertical-align top {
+    margin-left: 1em;
+  }
+}
+@media screen and (min-width:1024px) {
+  .contenedor {
+    border: 10px solid #808080;
+    padding: 0;
+    -webkit-box-shadow: 5px 5px 0 #ccc;
+    -moz-box-shadow: 5px 5px 0 #ccc;
+    box-shadow: 5px 5px 0 #ccc;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .contenedor .post,
+  .contenedor .etiquetas {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .contenedor .post {
+    width: 75%;
+    z-index: 33;
+  }
+  .contenedor .etiquetas {
+    top: 10px;
+    position: absolute;
+    right: 0;
+    width: 24%;
+  }
+  header .subheader {
+    width: 90%;
+  }
+  .menu {
+    width: 90%;
+  }
+  .menu .responsive {
+    display: none;
+  }
+  .menu ul {
+    display: block;
+li
+    display: inline-block;
+    vertical-align: top;
+  }
+}

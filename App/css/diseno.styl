@@ -1,0 +1,319 @@
+@import "normalize.css"
+
+@font-face {
+	font-family: 'portafolio';
+	src:url('../fonts/fonts/portafolio.eot?6de3dj');
+	src:url('../fonts/fonts/portafolio.eot?#iefix6de3dj') format('embedded-opentype'),
+		url('../fonts/fonts/portafolio.woff?6de3dj') format('woff'),
+		url('../fonts/fonts/portafolio.ttf?6de3dj') format('truetype'),
+		url('../fonts/fonts/portafolio.svg?6de3dj#portafolio') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+color-azul = #0033FF;
+color-negro = #000;
+color-blanco = #fff;
+a
+	text-decoration none
+figcaption
+	color color-blanco
+h3
+	margin 0
+	padding 0
+html
+body
+	font-size 16px;
+	font-family  'Open Sans', 'sans-serif';
+	height 100%
+header
+	background rgba(10, 48, 105, 0.82)
+	color color-blanco
+	padding 0.5em
+	position fixed
+	width 100%
+	z-index 33
+	.responsive
+	.titulo
+		display inline-block
+		vertical-align middle
+	.responsive
+		cursor pointer
+		&:after
+			font-family 'portafolio'
+			font-size 1.5em
+			content: "\e609";
+	.titulo
+		margin 0
+		padding  0
+		text-align center
+		line-height 30px
+		width 80%
+		.nombre
+		.twitter
+			display inline-block
+			text-decoration none
+			vertical-align top
+
+		.nombre
+			width 70%
+			a
+				color color-blanco
+				font-size 1.2rem
+		.twitter
+			display none
+			a
+				font-size .8rem
+				color color-azul
+
+.content
+	position relative
+	top 50px
+	.contents
+		padding 1em
+		box-sizing border-box
+		text-align center
+		transition all 3s ease-in
+		.datos-personales
+			.avatar
+				img
+					border 3px solid color-negro
+			.imagenes
+				ul
+					margin 0
+					padding 0
+				li
+					display inline-block
+					margin-left 10px
+					.img1
+					.img2
+					.img3
+						font-family 'portafolio'
+						color color-blanco
+						font-size 1.5rem
+					.img1
+						&:after
+							content: "\e606";
+					.img2
+						&:after
+							content: "\e607";
+					.img3
+						&:after
+							content: "\e605";
+		.negro					
+		.descripcion
+			text-align justify
+			font-size 1.2rem
+			font-weight normal
+			font-style normal
+			margin 0
+			margin 20px 0
+			padding 0
+		.descripcion
+			color rgba(color-blanco,0.88);
+		.negro
+			color color-negro
+		.skills
+			margin-left 20px
+		figure
+			border-radius 50%
+			display inline-block
+			margin-bottom 0.9rem
+			vertical-align top
+		
+			img
+				border-radius 50%
+				height 100px
+				width 100px
+			.styl
+				color #087E08
+			.html
+				color #FF8000;
+			.css
+				color color-azul
+			.js
+				color #FFFF00
+			.node
+				color #008040;
+			.back
+			.jq
+				color color-azul
+			.grunt
+				color #FF8000
+		.nombre
+			margin 0
+			padding 0
+			color color-blanco
+		.utp
+		.mejor
+			display block
+			font-size 2rem
+	.contacto
+		text-align center
+		height 150px
+		.sutitulo
+		.contactos
+			margin 0
+			padding 0
+		.contactos
+			top 20px
+			margin-bottom 40px
+			position relative
+		li
+			display inline-block
+			vertical-align top
+			a
+				.face
+				.twitter
+				.google
+				.git
+					font-family 'portafolio'
+					color black
+					margin-left 20px
+					font-size 1.5rem
+
+				.face
+					&:after
+						content '\e60b'
+				.twitter
+					&:after
+						content '\e60c'
+				.google
+					&:after
+						content '\e60a'
+				.git
+					&:after
+						content '\e60d'
+				
+.menu
+	background #5EAEFF
+	display none
+	height 100%
+	position fixed
+	top 51px
+	z-index:66
+	width 0%
+	ul
+		margin 0
+		padding 0
+		position absolute
+		top 10px
+		width 100%
+	li
+		list-style-type: none
+		margin-top 0.9rem
+		padding-left 20px
+		&:hover
+			background orangered
+		&:focus
+			background orangered
+		span
+		a
+			display	 inline-block
+			vertical-align	middle
+		.me
+			&:after
+				font-family 'portafolio'
+				font-size 1.1rem
+				content '\e601'
+		.per
+			&:after
+				font-family 'portafolio'
+				font-size 1.1rem
+				content '\e602'
+		.est
+			&:after
+				font-family 'portafolio'
+				font-size 1.1rem
+				content '\e600'
+		.blog
+			&:after
+				font-family 'portafolio'
+				font-size 1.1rem
+				content '\e603'
+		.cont
+			&:after
+				font-family 'portafolio'
+				font-size 1.1rem
+				content '\e604'
+	a
+		display block
+		padding 1rem 0.5rem
+		color color-blanco
+.mostrar
+	display block
+	-webkit-transition all  1s ease-in
+	-moz-transition all  1s ease-in
+	-ms-transition all 1s ease-in
+	-o-transition all  1s ease-in
+	transition all  1s ease-in
+	width 40%
+
+
+/*================== Comienza Responsive ===========*/
+@media screen and (min-width: 768px)
+	header
+		.responsive
+			display none
+	.content
+	.menu
+		display inline-block
+		vertical-align top
+		ul
+			top 50px
+	.content
+		position relative
+		left 25%
+		width 75%
+	.menu
+		width 25%
+		top 0
+		z-index 47
+
+
+@media screen and (min-width: 1024px)
+	header
+		text-align center
+		.twitter
+			display block
+	.content
+		left 15%
+		width 85%
+
+		.contents
+			.avatar
+				img
+					height 150px
+					width 150px
+			.skill
+			.descripcion
+			.negro
+				margin 20px auto
+				width 70%
+	
+			.skills
+				margin-left 5%
+				margin-bottom 20px
+				img
+					height 120px
+					width 120px
+				figcaption
+					font-size 1.3rem
+					margin-bottom 10px
+	.menu
+		width 15%
+
+
+
+/*Colores generales */
+.verde
+	background #2AA9A6
+
+.naranja
+	background #9EBCBA
+.verdecito
+	background #0AB380
+.naranjita
+	background #FF6633
+

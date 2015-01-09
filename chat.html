@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title> Comunicacion uno a uno</title>
+	<style>
+		body
+		{
+			font-size: 16px;
+			font-family: cursive;
+		}
+		section,header,footer
+		{
+			margin:0 auto;
+			width: 50%
+		}
+		p
+		{
+			font-size:1.3em;
+			text-align: justify;
+		}
+		.resp
+		{
+			font-size:1em;
+		}
+	</style>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="./App/funcion.js"></script>
+	<script src="./App/handlebars-v1.3.0.js"></script>
+	<script src="//vickvasquez.webcindario.com/App/Vendors/highlight.pack.js"></script>
+	<link rel="stylesheet" href="//vickvasquez.webcindario.com/App/css/styles/monokai.css">
+</head>
+<body>
+	<header>
+		
+		<h1> <a href="./index.html">Inicio</a>  Flujo de los mensajes </h1>
+	</header>
+	<section>
+		
+		<article>
+			<img src="./App/img/chat.jpg" alt="">
+		</article>
+		<article>
+			<p>
+				Lo que intento hacer es lo siguiente:
+				Tengo N Salas el cual contiene varios usuarios conectados, pero las salas los quiero ocupar nadamas
+				como criterio, asi como se muestra en la imagen si yo me conecto a la sala X y envio un mensaje le tiene que llegar a todos los usuarios conectados, cuando me respondan que me llegue a mi nadamas el mensaje y al resto de los usuarios no. no se si me explico a continuacion el codigo que tengo actualmente
+			</p>
+<pre>
+<code>
+var usuarios_conectado = get_users_connected(socket.sala);
+ usuarios_conectado.uc.toArray(function(err,res){
+ console.log(res);
+ debugger;
+ for(var i=0;i < res.length;i++) {
+  if(usuarios[res[i].usuario]) {
+   if(res[i].usuario != socket.usuarios) {
+    //socket.to(socket.sala).emit('usuarios',res[i].usuario);
+    //console.log('Enviando el mensja a :'+ res[i].socket);
+    io.sockets.socket(res[i].socket).emit('envmsj',socket.usuarios,msj,hora);
+   }
+  }									
+}
+});
+</code>
+</pre>
+<p>
+	intente que un setTimeout() para que tuviera retrasos pero nada, es por esa razon que acudo a ustedes haber si me pueden echar una mano.
+</p>
+Esta es la estructura de mi BD
+<pre>
+	<code>
+> db.usuariios.findOne()
+{
+ "_id" : ObjectId("533b14e7a11b7c5c0c10e7e6"),
+ "estado" : "conectado",
+ "sala" : "SKMOC",
+ "socket" : "zwiUKnol1UOqz0MwyaM5",
+ "tienda" : "2",
+ "usuario" : "xaam"
+}
+>
+
+	</code>
+</pre>
+		</article>
+	<article>
+		<hr/>
+		<span>
+			RESPUESTAS:
+		</span>
+		<div class="respuesta">
+		
+		</div>
+		<form id="resp">
+			<label for="">Usuario: </label><input type="text" name="usuario"><br/>
+			<label for="">Respuesta:</label><br/>
+			<textarea name="res" id="" cols="60" rows="10">				
+			</textarea>
+			<br/>
+			<input type="button" value="Enviar" id="guardar">
+		</form>
+	</article>
+	</section>
+	<footer>
+		<h2>Saludos de parte de <a href="www.twitter.com/vicxaam90">vicxaam90</a></h2>
+	</footer>
+	<script id="plantilla" type="text/x-handlebars-template">
+		<a href='#'>
+			{{ usuario }}:
+		</a>
+		<p class='resp'>
+			{{respuesta}}
+		</p>
+		<div class='acciones'>
+			<input type='button' value='Eliminar' data-user={{usuario}}  id='eliminar' />
+		</div>
+	</script>	
+	<!-- Configuracion hiinitHighlighting-->
+	<script>
+    	hljs.configure({tabReplace:'	  '});
+  		hljs.initHighlightingOnLoad();
+	</script>
+</body>
+</html>

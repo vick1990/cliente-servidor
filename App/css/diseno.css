@@ -1,0 +1,356 @@
+@import "normalize.css";
+@font-face {
+  font-family: 'portafolio';
+  src: url("../fonts/fonts/portafolio.eot?6de3dj");
+  src: url("../fonts/fonts/portafolio.eot?#iefix6de3dj") format('embedded-opentype'), url("../fonts/fonts/portafolio.woff?6de3dj") format('woff'), url("../fonts/fonts/portafolio.ttf?6de3dj") format('truetype'), url("../fonts/fonts/portafolio.svg?6de3dj#portafolio") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+}
+figcaption {
+  color: #fff;
+}
+h3 {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', 'sans-serif';
+  height: 100%;
+}
+header {
+  background: rgba(10,48,105,0.82);
+  color: #fff;
+  padding: 0.5em;
+  position: fixed;
+  width: 100%;
+  z-index: 33;
+}
+header .responsive,
+header .titulo {
+  display: inline-block;
+  vertical-align: middle;
+}
+header .responsive {
+  cursor: pointer;
+}
+header .responsive:after {
+  font-family: 'portafolio';
+  font-size: 1.5em;
+  content: "\e609";
+}
+header .titulo {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 30px;
+  width: 80%;
+}
+header .titulo .nombre,
+header .titulo .twitter {
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: top;
+}
+header .titulo .nombre {
+  width: 70%;
+}
+header .titulo .nombre a {
+  color: #fff;
+  font-size: 1.2rem;
+}
+header .titulo .twitter {
+  display: none;
+}
+header .titulo .twitter a {
+  font-size: 0.8rem;
+  color: #03f;
+}
+.content {
+  position: relative;
+  top: 50px;
+}
+.content .contents {
+  padding: 1em;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 3s ease-in;
+}
+.content .contents .datos-personales .avatar img {
+  border: 3px solid #000;
+}
+.content .contents .datos-personales .imagenes ul {
+  margin: 0;
+  padding: 0;
+}
+.content .contents .datos-personales .imagenes li {
+  display: inline-block;
+  margin-left: 10px;
+}
+.content .contents .datos-personales .imagenes li .img1,
+.content .contents .datos-personales .imagenes li .img2,
+.content .contents .datos-personales .imagenes li .img3 {
+  font-family: 'portafolio';
+  color: #fff;
+  font-size: 1.5rem;
+}
+.content .contents .datos-personales .imagenes li .img1:after {
+  content: "\e606";
+}
+.content .contents .datos-personales .imagenes li .img2:after {
+  content: "\e607";
+}
+.content .contents .datos-personales .imagenes li .img3:after {
+  content: "\e605";
+}
+.content .contents .negro,
+.content .contents .descripcion {
+  text-align: justify;
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  margin: 20px 0;
+  padding: 0;
+}
+.content .contents .descripcion {
+  color: rgba(255,255,255,0.88);
+}
+.content .contents .negro {
+  color: #000;
+}
+.content .contents .skills {
+  margin-left: 20px;
+}
+.content .contents figure {
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  vertical-align: top;
+}
+.content .contents figure img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+.content .contents figure .styl {
+  color: #087e08;
+}
+.content .contents figure .html {
+  color: #ff8000;
+}
+.content .contents figure .css {
+  color: #03f;
+}
+.content .contents figure .js {
+  color: #ff0;
+}
+.content .contents figure .node {
+  color: #008040;
+}
+.content .contents figure .back,
+.content .contents figure .jq {
+  color: #03f;
+}
+.content .contents figure .grunt {
+  color: #ff8000;
+}
+.content .contents .nombre {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+.content .contents .utp,
+.content .contents .mejor {
+  display: block;
+  font-size: 2rem;
+}
+.content .contacto {
+  text-align: center;
+  height: 150px;
+}
+.content .contacto .sutitulo,
+.content .contacto .contactos {
+  margin: 0;
+  padding: 0;
+}
+.content .contacto .contactos {
+  top: 20px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.content .contacto li {
+  display: inline-block;
+  vertical-align: top;
+}
+.content .contacto li a .face,
+.content .contacto li a .twitter,
+.content .contacto li a .google,
+.content .contacto li a .git {
+  font-family: 'portafolio';
+  color: #000;
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+.content .contacto li a .face:after {
+  content: '\e60b';
+}
+.content .contacto li a .twitter:after {
+  content: '\e60c';
+}
+.content .contacto li a .google:after {
+  content: '\e60a';
+}
+.content .contacto li a .git:after {
+  content: '\e60d';
+}
+.menu {
+  background: #5eaeff;
+  display: none;
+  height: 100%;
+  position: fixed;
+  top: 51px;
+  z-index: 66;
+  width: 0%;
+}
+.menu ul {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+}
+.menu li {
+  list-style-type: none;
+  margin-top: 0.9rem;
+  padding-left: 20px;
+}
+.menu li:hover {
+  background: #ff4500;
+}
+.menu li:focus {
+  background: #ff4500;
+}
+.menu li span,
+.menu li a {
+  display: inline-block;
+  vertical-align: middle;
+}
+.menu li .me:after {
+  font-family: 'portafolio';
+  font-size: 1.1rem;
+  content: '\e601';
+}
+.menu li .per:after {
+  font-family: 'portafolio';
+  font-size: 1.1rem;
+  content: '\e602';
+}
+.menu li .est:after {
+  font-family: 'portafolio';
+  font-size: 1.1rem;
+  content: '\e600';
+}
+.menu li .blog:after {
+  font-family: 'portafolio';
+  font-size: 1.1rem;
+  content: '\e603';
+}
+.menu li .cont:after {
+  font-family: 'portafolio';
+  font-size: 1.1rem;
+  content: '\e604';
+}
+.menu a {
+  display: block;
+  padding: 1rem 0.5rem;
+  color: #fff;
+}
+.mostrar {
+  display: block;
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  width: 40%;
+}
+/*================== Comienza Responsive ===========*/
+@media screen and (min-width: 768px) {
+  header .responsive {
+    display: none;
+  }
+  .content,
+  .menu {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .content ul,
+  .menu ul {
+    top: 50px;
+  }
+  .content {
+    position: relative;
+    left: 25%;
+    width: 75%;
+  }
+  .menu {
+    width: 25%;
+    top: 0;
+    z-index: 47;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    text-align: center;
+  }
+  header .twitter {
+    display: block;
+  }
+  .content {
+    left: 15%;
+    width: 85%;
+  }
+  .content .contents .avatar img {
+    height: 150px;
+    width: 150px;
+  }
+  .content .contents .skill,
+  .content .contents .descripcion,
+  .content .contents .negro {
+    margin: 20px auto;
+    width: 70%;
+  }
+  .content .contents .skills {
+    margin-left: 5%;
+    margin-bottom: 20px;
+  }
+  .content .contents .skills img {
+    height: 120px;
+    width: 120px;
+  }
+  .content .contents .skills figcaption {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  .menu {
+    width: 15%;
+  }
+}
+/*Colores generales */
+.verde {
+  background: #2aa9a6;
+}
+.naranja {
+  background: #9ebcba;
+}
+.verdecito {
+  background: #0ab380;
+}
+.naranjita {
+  background: #f63;
+}

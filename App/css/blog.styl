@@ -1,0 +1,205 @@
+body
+	font-size 16px
+	background #272822;
+	font-family Arial
+a
+	text-decoration none
+	color black
+.contenedor
+	padding 0 10px
+	position relative
+	-webkit-box-sizing border-box
+	-moz-box-sizing border-box
+	box-sizing border-box
+	width 100%;
+	.post
+		background white
+		padding 0 10px
+		position relative
+		margin-bottom 10px
+		.contenido-post
+			top 10px
+			border-bottom 5px solid orangered
+		
+			.texto
+				font-family 'Open Sans'
+				text-align justify
+		.tags
+		.comentarios-post
+			display inline-block
+			vertical-align bottom
+		.comentarios-post
+			padding 5px 
+			background #272822
+			border-radius 5px
+			float right
+			margin-top 5px
+			a
+				display block
+				color white
+		.tags
+			margin 10px
+			.tag
+				background #0080FF
+				border-radius 5px
+				color white
+				cursor: pointer
+				padding 5px 10px
+		.titulo-post
+			background #0080FF
+			color white
+			font-size 1.5em
+			font-weight normal
+			left -20px;
+			margin 0
+			margin-bottom 20px
+			padding 5px 5px 5px 30px
+			position relative
+			top 10px
+			width auto
+			z-index 34
+
+			&:after
+				content ""
+			&:before
+				content ""
+				border-left 19px solid transparent
+				border-bottom 20px solid transparent
+				border-right 11px solid #004080
+				position absolute
+				left -20px
+				bottom -20px
+
+	.etiquetas
+		width 100%
+		.titulo-etiquetas
+			font-family 'Open Sans'
+			color white
+			text-align center
+			margin 0
+			font-weight normal
+		ul
+			margin 0
+			padding 0
+			li
+				background #008040
+				-webkit-box-shadow inset 10px 0 5px rgba(0, 0, 0, .75)
+				-moz-box-shadow inset 10px 0 5px rgba(0, 0, 0, .75)
+				box-shadow inset 10px 0 5px rgba(0, 0, 0, .75)
+				display block
+				padding 1.5em
+				padding-left 5.5em
+				text-align left
+				&:nth-child(odd)
+						background rgb(48, 180, 48)
+					&:nth-child(even)
+						background #FF8000
+					&:hover
+						opacity: .5
+				a
+					color white
+					padding 10px 20px 10px
+					text-transform uppercase
+header
+	position:relative
+	.subheader
+		padding-top 1em
+		margin 0 auto
+		position relative
+		width 95%
+		.search-box
+			display none
+			width 100%
+			position relative
+			bottom 0.5em
+			input[type=text]
+				padding 0.5em
+				border-radius 5px
+				border-radius 5px 0 0 5px
+				width 30%
+			input[type=button]
+				padding 0.5em
+				position absolute
+		.user-active
+			display none
+.menu
+	width 95%
+	background #8B8B8B
+	margin 0 auto
+	.responsive
+		padding 1em
+		display block
+		cursor pointer
+		
+	ul
+		margin 0
+		padding 0
+		display none
+		li
+			display inline-block
+			a
+				color white
+		
+
+@media screen and (min-width:767px)
+	.contenedor
+		border 10px solid gray
+		padding 0
+		-webkit-box-shadow 5px 5px 0 #ccc
+		-moz-box-shadow 5px 5px 0 #ccc
+		box-shadow 5px 5px 0 #ccc
+	header
+		.subheader
+			width 100%
+			.search-box
+			.user-active
+				display block
+	.menu
+		height 70px
+		width 100%
+		line-height 70px;
+
+		.responsive
+			display none
+		ul
+			display block
+		 	li
+		 		display inline-block
+		 		vertical-align top
+				margin-left 1em
+		 		a
+		 			padding 1em
+@media screen and (min-width:1024px)
+	.contenedor
+		border 10px solid gray
+		padding 0
+		-webkit-box-shadow 5px 5px 0 #ccc
+		-moz-box-shadow 5px 5px 0 #ccc
+		box-shadow 5px 5px 0 #ccc
+		margin 0 auto
+		width 90%
+
+		.post
+		.etiquetas
+			display inline-block
+			vertical-align top
+		.post
+			width 75%;
+			z-index:33
+		.etiquetas
+			top 10px
+			position absolute
+			right 0
+			width 24%
+	header
+		.subheader
+			width 90%
+	.menu
+		width 90%
+		.responsive
+			display none
+		ul
+			display block
+			li
+			 	display inline-block
+			 	vertical-align top
