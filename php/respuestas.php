@@ -48,7 +48,7 @@ class respuestas
 	 }
 
 	 private function conectar() {
-	  	$cnx = mysql_connect('mysql.webcindario.com','vickvasquez','darknees_1990');
+	  	$cnx = mysql_connect('','','');
 	  	if(!$cnx) {
 	  		echo 'Error al realizar la conexion';
 	  		exit();
